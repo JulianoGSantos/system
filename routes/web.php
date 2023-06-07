@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('home', [WoodController::class, 'start'])->name('start');
+Route::get('cliente', [WoodController::class, 'indexclient'])->name('index.client');
