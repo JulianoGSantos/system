@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Board;
 use Illuminate\Http\Request;
 
 class WoodController extends Controller
@@ -16,8 +17,22 @@ class WoodController extends Controller
         return view('indexclient');
     }
 
-    public function storeclient()
+    public function storeclient(Request $request)
     {
-        
+        $client = new Board();
+
+        $client->name = $request->name;
+        $client->cpf = $request->cpf;
+        $client->email = $request->email; 
+        $client->street = $request->street; 
+        $client->number = $request->number; 
+        $client->complement = $request->complement; 
+        $client->city = $request->city; 
+        $client->state = $request->state; 
+        $client->cep = $request->cep; 
+        $client->cellphone = $request->cellphone; 
+        $client->cellphone2 = $request->cellphone2;
+
+        $client->save();
     }
 }
