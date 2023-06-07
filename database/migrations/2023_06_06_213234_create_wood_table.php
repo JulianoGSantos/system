@@ -11,9 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('wood', function (Blueprint $table) {
+        Schema::create('woods', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('cpf');
+            $table->string('email');
+            $table->string('street');
+            $table->string('number');
+            $table->string('complement');
+            $table->string('city');
+            $table->string('state');
+            $table->string('cep');
+            $table->string('cellphone');
+            $table->string('cellphone2');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

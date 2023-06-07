@@ -15,4 +15,9 @@ class WoodController extends Controller
     {
         return view('indexclient');
     }
+
+    public function storeclient()
+    {
+        
+    }
 }
