@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BoardController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\WoodController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +28,8 @@ Route::view('busca', 'search')->name('search');
 Route::get('cliente', [BoardController::class, 'indexclient'])->name('index.client');
 Route::post('cliente', [BoardController::class, 'storeclient'])->name('store.client');
 Route::get('busca/cliente', [BoardController::class, 'searchclient'])->name('search.client');
+
+//Colaborador
+Route::get('funcionario', [EmployeeController::class, 'indexemployee'])->name('index.employee');
+Route::post('funcionario', [EmployeeController::class, 'storeemployee'])->name('store.employee');
+Route::get('busca/funcionario', [EmployeeController::class, 'searchemployee'])->name('search.employee');

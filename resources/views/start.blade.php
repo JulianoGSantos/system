@@ -7,10 +7,11 @@
     <title>Home</title>
 </head>
 <header>
-    HOME
+    <div>HOME</div>
 </header>
 <body>
     <a href=" {{route ('index.client') }}">Cliente</a>
+    <a href=" {{route ('index.employee') }}">Colaborador</a>
 </body>
 <footer>
     <a href=" {{ route('search') }}">Busca</a>
