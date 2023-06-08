@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BoardController;
 use App\Http\Controllers\WoodController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('home', [WoodController::class, 'start'])->name('start');
-Route::get('cliente', [WoodController::class, 'indexclient'])->name('index.client');
-Route::post('cliente', [WoodController::class, 'storeclient'])->name('store.client');
+Route::get('home', [BoardController::class, 'start'])->name('start');
+Route::get('cliente', [BoardController::class, 'indexclient'])->name('index.client');
+Route::post('cliente', [BoardController::class, 'storeclient'])->name('store.client');

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Board;
 use Illuminate\Http\Request;
 
-class WoodController extends Controller
+class BoardController extends Controller
 {
     public function start()
     {
