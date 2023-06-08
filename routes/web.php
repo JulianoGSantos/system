@@ -19,6 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Home
 Route::get('home', [BoardController::class, 'start'])->name('start');
+Route::view('busca', 'search')->name('search');
+
+//Cliente
 Route::get('cliente', [BoardController::class, 'indexclient'])->name('index.client');
 Route::post('cliente', [BoardController::class, 'storeclient'])->name('store.client');
+Route::get('busca/cliente', [BoardController::class, 'searchclient'])->name('search.client');

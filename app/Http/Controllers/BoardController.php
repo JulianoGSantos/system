@@ -35,4 +35,11 @@ class BoardController extends Controller
 
         $client->save();
     }
+
+    public function searchclient(Board $client)
+    {
+        $clients = $client->all();
+
+        return view('client/searchclient', compact('clients'));
+    }
 }
