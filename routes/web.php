@@ -3,6 +3,7 @@
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\WoodController;
+use App\Models\Board;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,7 +30,8 @@ Route::get('cliente', [BoardController::class, 'indexclient'])->name('index.clie
 Route::post('cliente', [BoardController::class, 'storeclient'])->name('store.client');
 Route::get('busca/cliente', [BoardController::class, 'searchclient'])->name('search.client');
 Route::get('cliente/{id}', [BoardController::class, 'showclient'])->name('show.client');
-Route::get('cliente/{id}/edit', )->name('');
+Route::get('cliente/{id}/edit', [BoardController::class, 'editclient'])->name('edit.client');
+Route::put('cliente/{id}', [BoardController::class, 'updateclient'])->name('update.client');
 
 //Colaborador
 Route::get('funcionario', [EmployeeController::class, 'indexemployee'])->name('index.employee');

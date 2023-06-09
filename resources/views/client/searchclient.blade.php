@@ -10,7 +10,7 @@
     @foreach ($clients as $client)
         <tr>
             <div>{{ $client->name}}
-            {{ $client->cpf}}</div> <td><a href=" {{ route('show.client', $client->id) }}">detalhes</a></td>
+            {{ $client->cpf}}</div> <td><a href=" {{ route('show.client', $client->id) }}">detalhes </a></td><td><a href=" {{ route('edit.client', $client->id) }}"> editar</a></td>
         </tr>
     @endforeach
 </body>

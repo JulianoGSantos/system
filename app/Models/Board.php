@@ -9,17 +9,17 @@ class Board extends Model
 {
     use HasFactory;
 
-    protected $fillabel = [
-        'name', 
+    protected $fillable = [
+        'name',
         'cpf',
-        'email', 
-        'street', 
-        'number', 
-        'complement', 
-        'city', 
-        'state', 
-        'cep', 
-        'cellphone', 
+        'email',
+        'street',
+        'number',
+        'complement',
+        'city',
+        'state',
+        'cep',
+        'cellphone',
         'cellphone2',
     ];
 }

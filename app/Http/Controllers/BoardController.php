@@ -52,5 +52,36 @@ class BoardController extends Controller
         return view('client/showclient', compact('client'));
     }
 
-    
+    public function editclient(Board $client, string $id)
+    {
+        if(!$client = $client->find($id))
+        {
+            return back();
+        }
+        return view('client/editclient', compact('client'));
+    }
+
+    public function updateclient(Request $request, Board $client, string $id)
+    {
+        if(!$client = $client->find($id))
+        {
+            return back();
+        }
+
+        $client->update($request->only([
+        'name',
+        'cpf',
+        'email', 
+        'street', 
+        'number', 
+        'complement', 
+        'city', 
+        'state', 
+        'cep', 
+        'cellphone', 
+        'cellphone2'
+        ]));
+
+        return view('indexclient', compact('client'));
+    }
 }
