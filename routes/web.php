@@ -28,6 +28,8 @@ Route::view('busca', 'search')->name('search');
 Route::get('cliente', [BoardController::class, 'indexclient'])->name('index.client');
 Route::post('cliente', [BoardController::class, 'storeclient'])->name('store.client');
 Route::get('busca/cliente', [BoardController::class, 'searchclient'])->name('search.client');
+Route::get('cliente/{id}', [BoardController::class, 'showclient'])->name('show.client');
+Route::get('cliente/{id}/edit', )->name('');
 
 //Colaborador
 Route::get('funcionario', [EmployeeController::class, 'indexemployee'])->name('index.employee');

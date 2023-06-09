@@ -42,4 +42,15 @@ class BoardController extends Controller
 
         return view('client/searchclient', compact('clients'));
     }
+
+    public function showclient(string $id)
+    {
+        if(!$client = Board::find($id))
+        {
+            return back();
+        }
+        return view('client/showclient', compact('client'));
+    }
+
+    
 }
