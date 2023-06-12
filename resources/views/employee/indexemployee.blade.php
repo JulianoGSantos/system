@@ -49,6 +49,6 @@
     </form>
 </body>
 <footer>
-    <div><a href="http://www.google.com">google</a></div>
+    <div><a href="{{ route('start') }}">homepage</a></div>
 </footer>
 </html>

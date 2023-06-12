@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Detalhes do CLiente</title>
+    <title>Deletar CLiente</title>
 </head>
 <header>
     <h1> {{ $client->name}} </h1>
@@ -22,13 +22,8 @@
         <li>{{$client->cellphone}}</li> 
         <li>{{$client->cellphone2}}</li>
     </ul>
-    <form action=" {{ route('destroy.client', $client->id) }}" method="POST">
-        @csrf
-        @method('DELETE')
-        <button type="submit"> Deletar</button>
-    </form>
 </body>
 <footer>
-
+<a href="#"></a>
 </footer>
 </html>

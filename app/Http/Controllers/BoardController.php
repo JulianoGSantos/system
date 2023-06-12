@@ -84,4 +84,15 @@ class BoardController extends Controller
 
         return view('indexclient', compact('client'));
     }
+
+    public function destroyclient(Board $client, string $id)
+    {
+        if(!$client = $client->find($id))
+        {
+            return back();
+        }
+        $client->delete();
+
+        return view('indexclient');
+    }
 }

@@ -32,6 +32,7 @@ Route::get('busca/cliente', [BoardController::class, 'searchclient'])->name('sea
 Route::get('cliente/{id}', [BoardController::class, 'showclient'])->name('show.client');
 Route::get('cliente/{id}/edit', [BoardController::class, 'editclient'])->name('edit.client');
 Route::put('cliente/{id}', [BoardController::class, 'updateclient'])->name('update.client');
+Route::delete('cliente/{id}', [BoardController::class, 'destroyclient'])->name('destroy.client');
 
 //Colaborador
 Route::get('funcionario', [EmployeeController::class, 'indexemployee'])->name('index.employee');

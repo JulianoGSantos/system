@@ -14,6 +14,6 @@
     <a href="{{ route('search.employee') }}">Colaborador</a>
 </body>
 <footer>
-    <a href="#"></a>
+    <div><a href="{{ route('start') }}">homepage</a></div>
 </footer>
 </html>

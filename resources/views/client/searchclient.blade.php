@@ -14,4 +14,7 @@
         </tr>
     @endforeach
 </body>
+<footer>
+    <div><a href="{{ route('start') }}">homepage</a></div>
+</footer>
 </html>

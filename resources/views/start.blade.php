@@ -12,6 +12,7 @@
 <body>
     <a href=" {{route ('index.client') }}">Cliente</a>
     <a href=" {{route ('index.employee') }}">Colaborador</a>
+    <a href=" {{route ('index.user') }}">Usuário</a>
 </body>
 <footer>
     <a href=" {{ route('search') }}">Busca</a>
