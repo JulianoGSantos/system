@@ -41,4 +41,13 @@ class EmployeeController extends Controller
 
         return view('employee/searchemployee', compact('employees'));
     }
+
+    public function showemployee(Employee $employee, string $id)
+    {
+        if(!$employee = $employee->find($id)){
+            return back();
+        }
+        
+        return view('employee/showemployee', compact('employee'));
+    }
 }

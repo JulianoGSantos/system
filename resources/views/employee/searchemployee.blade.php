@@ -10,7 +10,7 @@
     @foreach ($employees as $employee)
         <tr>
             <div>{{ $employee->name}}
-            {{ $employee->office}}</div>
+            {{ $employee->office}}</div><a href="{{ route('show.employee', $employee->id) }}">Detalhes</a>
         </tr>
     @endforeach
 </body>

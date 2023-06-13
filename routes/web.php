@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\WoodController;
 use App\Models\Board;
 use Illuminate\Support\Facades\Route;
@@ -38,3 +39,7 @@ Route::delete('cliente/{id}', [BoardController::class, 'destroyclient'])->name('
 Route::get('funcionario', [EmployeeController::class, 'indexemployee'])->name('index.employee');
 Route::post('funcionario', [EmployeeController::class, 'storeemployee'])->name('store.employee');
 Route::get('busca/funcionario', [EmployeeController::class, 'searchemployee'])->name('search.employee');
+Route::get('funcionario/{id}', [EmployeeController::class, 'showemployee'])->name('show.employee');
+
+//Usuário
+Route::get('usuario', [UserController::class, 'indexuser'])->name('index.user');
