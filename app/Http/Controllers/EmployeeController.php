@@ -50,4 +50,40 @@ class EmployeeController extends Controller
         
         return view('employee/showemployee', compact('employee'));
     }
+
+    public function editemployee(Employee $employee, string $id)
+    {
+        if(!$employee = $employee->find($id)){
+            return back();
+        }
+
+        return view('employee/editemployee', compact('employee'));
+    }
+
+    public function updateemployee(Employee $employee, string $id)
+    {
+        if(!$employee = $employee->find($id)){
+            return back();
+        }
+
+        $employee = $employee->update([
+            'name',
+            'office',
+            'departament',
+            'cpf',
+            'email',
+            'street',
+            'number',
+            'complement',
+            'city',
+            'state',
+            'cep',
+            'cellphone',
+            'cellphone2',
+            'birth',
+            'admission'
+        ]);
+        
+        return view('employee/editemployee', compact('employee'));
+    }
 }

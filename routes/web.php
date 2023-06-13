@@ -40,6 +40,7 @@ Route::get('funcionario', [EmployeeController::class, 'indexemployee'])->name('i
 Route::post('funcionario', [EmployeeController::class, 'storeemployee'])->name('store.employee');
 Route::get('busca/funcionario', [EmployeeController::class, 'searchemployee'])->name('search.employee');
 Route::get('funcionario/{id}', [EmployeeController::class, 'showemployee'])->name('show.employee');
-
+Route::get('funcionario/{id}/edit', [EmployeeController::class, 'editemployee'])->name('edit.employee');
+Route::put('funcionario/{id}', [EmployeeController::class, 'updateemployee'])->name('update.employee');
 //Usuário
 Route::get('usuario', [UserController::class, 'indexuser'])->name('index.user');
