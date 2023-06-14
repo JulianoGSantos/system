@@ -60,13 +60,13 @@ class EmployeeController extends Controller
         return view('employee/editemployee', compact('employee'));
     }
 
-    public function updateemployee(Employee $employee, string $id)
+    public function updateemployee(Request $request, Employee $employee, string $id)
     {
         if(!$employee = $employee->find($id)){
             return back();
         }
 
-        $employee = $employee->update([
+        $employee->update($request->only([
             'name',
             'office',
             'departament',
@@ -82,7 +82,7 @@ class EmployeeController extends Controller
             'cellphone2',
             'birth',
             'admission'
-        ]);
+        ]));
         
         return view('employee/editemployee', compact('employee'));
     }
