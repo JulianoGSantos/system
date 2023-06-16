@@ -84,6 +84,6 @@ class EmployeeController extends Controller
             'admission'
         ]));
         
-        return view('employee/editemployee', compact('employee'));
+        return view('employee/searchemployee');
     }
 }

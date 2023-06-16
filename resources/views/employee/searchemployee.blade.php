@@ -8,10 +8,10 @@
 </head>
 <body>
     @foreach ($employees as $employee)
-        <tr>
-            <div>{{ $employee->name}}
-            {{ $employee->office}}</div><a href="{{ route('show.employee', $employee->id) }}">Detalhes</a>
-        </tr>
+    <tr>
+        <div>{{ $employee->name}}
+        {{ $employee->office}}</div><a href="{{ route('show.employee', $employee->id) }}">Detalhes</a><a href="{{ route('edit.employee', $employee->id) }}"> Eidt</a>
+    </tr> 
     @endforeach
 </body>
 </html>

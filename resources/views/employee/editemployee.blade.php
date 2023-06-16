@@ -20,24 +20,24 @@
         <label for="idepartament">Departamento</label>
         <input type="text" name="departament" id="idepartament" value="{{$employee->departament}}">
         <label for="icpf">CPF</label>
-        <input type="text" name="cpf" id="icpf" value="{{$$employee->cpf}}">
+        <input type="text" name="cpf" id="icpf" value="{{$employee->cpf}}">
         <label for="iemail">E-mail</label>
-        <input type="text" name="email" id="iemail" value="{{$$employee->email}}">
+        <input type="text" name="email" id="iemail" value="{{$employee->email}}">
         <div>Endereço</div>
-        <input type="text" name="street" id="istreet" value="{{$$employee->street}}">
+        <input type="text" name="street" id="istreet" value="{{$employee->street}}">
         <label for="istreet">Rua</label>
-        <input type="text" name="number" id="inumber" value="{{$$employee->number}}">
+        <input type="text" name="number" id="inumber" value="{{$employee->number}}">
         <label for="inumber">Número</label>
-        <input type="text" name="complement" id="icomplement" value="{{$$employee->complement}}">
+        <input type="text" name="complement" id="icomplement" value="{{$employee->complement}}">
         <label for="icomplement">Complemento</label>
-        <input type="text" name="city" id="icity" value="{{$$employee->city}}">
+        <input type="text" name="city" id="icity" value="{{$employee->city}}">
         <label for="icity">Cidade</label>
-        <input type="text" name="state" id="istate" value="{{$$employee->state}}">
+        <input type="text" name="state" id="istate" value="{{$employee->state}}">
         <label for="istate">Estado</label>
-        <input type="text" name="cep" id="icep" value="{{$$employee->cep}}">
+        <input type="text" name="cep" id="icep" value="{{$employee->cep}}">
         <label for="icep">CEP</label>
         <div>Telefone</div>
-        <input type="text" name="cellphone" id="icellphone" value="{{$$employee->cellphone}}">
+        <input type="text" name="cellphone" id="icellphone" value="{{$employee->cellphone}}">
         <label for="icellphone">Celular</label>
         <input type="text" name="cellphone2" id="icellphone2" value="{{$employee->cellphone2}}">
         <label for="icellphone2">Celular2</label>
@@ -49,6 +49,6 @@
     </form>
 </body>
 <footer>
-    <div><a href="{{ route('start') }}">google</a>homepage</div>
+    <div><a href="{{ route('start') }}">homepage</a></div>
 </footer>
 </html>
