@@ -42,6 +42,7 @@ Route::get('busca/funcionario', [EmployeeController::class, 'searchemployee'])->
 Route::get('funcionario/{id}', [EmployeeController::class, 'showemployee'])->name('show.employee');
 Route::get('funcionario/{id}/edit', [EmployeeController::class, 'editemployee'])->name('edit.employee');
 Route::put('funcionario/{id}', [EmployeeController::class, 'updateemployee'])->name('update.employee');
+Route::delete('funcionario/{id}', [EmployeeController::class, 'destroyemployee'])->name('destroy.employee');
 
 //Usuário
 Route::get('usuario', [UserController::class, 'indexuser'])->name('index.user');

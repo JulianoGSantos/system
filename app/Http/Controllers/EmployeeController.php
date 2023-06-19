@@ -84,6 +84,14 @@ class EmployeeController extends Controller
             'admission'
         ]));
         
-        return view('employee/searchemployee');
+        return view('employee/indexemployee', compact('employee'));
+    }
+    public function destroyemployee(Request $request, Employee $employee, string $id)
+    {
+        if(!$employee = $employee->find('$id')){
+            return back();
+        }
+
+        $employee->delete();
     }
 }

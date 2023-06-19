@@ -26,6 +26,11 @@
         <li>{{$employee->birth}}</li>
         <li>{{$employee->admission}}</li>
     </ul>
+    <form action="{{ route('destroy.employee', $employee->id)}}", method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit">Deletar</button>
+    </form>
 </body>
 <footer>
 
