@@ -86,12 +86,15 @@ class EmployeeController extends Controller
         
         return view('employee/indexemployee', compact('employee'));
     }
-    public function destroyemployee(Request $request, Employee $employee, string $id)
+
+    public function destroyemployee(Employee $employee, string $id)
     {
-        if(!$employee = $employee->find('$id')){
+        if(!$employee = $employee->find($id))
+        {
             return back();
         }
-
         $employee->delete();
+        
+        return view('employee/indexemployee');
     }
 }
