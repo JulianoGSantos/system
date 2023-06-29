@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\BoardController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
