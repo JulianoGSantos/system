@@ -11,7 +11,7 @@
     <head>
         @yield('header')
     </head>
-    <div class="content">
+    <div class="content" bg-blue-500>
         @yield('content')
     </div>
     <footer>

@@ -12,7 +12,7 @@
 </header>
 
 @section('content')
-    <body>
+    <body class="bg-gray-300">
         <form action=" {{ route('store.client') }}" method="POST">
         @csrf
             <label for="iname">Nome</label>
