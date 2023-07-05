@@ -7,11 +7,11 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-">
-    <head>
+<body class="w-9/12 h-screen bg-gray-200">
+    <head class="text-center">
         @yield('header')
     </head>
-    <div class="content bg-gray-200 p-2 m-2 border-2 border-yellow-200 rounded-xl">
+    <div class="content bg-gradient-to-br from-blue-600 to-green-400 p-2 m-2 border-2 border-yellow-200 rounded-xl">
         @yield('content')
     </div>
     <footer>

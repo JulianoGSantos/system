@@ -7,39 +7,41 @@
     <title>Cadastro de clientes</title>
     @extends('client.layouts.app')
 </head>
-<header>
-    <div>CADASTRO DE CLIENTES</div>
-</header>
+@section('header')
+    <header>
+        <div class="text-center">CADASTRO DE CLIENTES</div>
+    </header>
+@endsection
 
 @section('content')
     <body>
         <form action=" {{ route('store.client') }}" method="POST">
         @csrf
         <div class="mt-4 space-y-4"></div>
-            <label for="iname">Nome</label>
-            <input type="text" name="name" id="iname">
-            <label for="icpf">CPF</label>
-            <input type="text" name="cpf" id="icpf">
-            <label for="iemail">E-mail</label>
+            <label for="iname">Nome</label><br>
+            <input type="text" name="name" id="iname"><br>
+            <label for="icpf">CPF</label><br>
+            <input type="text" name="cpf" id="icpf"><br>
+            <label for="iemail">E-mail</label><br>
             <input type="text" name="email" id="iemail">
         <div class="mt-4 space-y-4">Endereço</div>
-            <label for="istreet">Rua</label>
-            <input type="text" name="street" id="istreet">
-            <label for="inumber">Número</label>
-            <input type="text" name="number" id="inumber">
-            <label for="icomplement">Complemento</label>
-            <input type="text" name="complement" id="icomplement">           
-            <label for="icity">Cidade</label>
-            <input type="text" name="city" id="icity">
-            <label for="istate">Estado</label>
-            <input type="text" name="state" id="istate">
-            <label for="icep">CEP</label>
-            <input type="text" name="cep" id="icep">
+            <label for="istreet">Rua</label><br>
+            <input type="text" name="street" id="istreet"><br>
+            <label for="inumber">Número</label><br>
+            <input type="text" name="number" id="inumber"><br>
+            <label for="icomplement">Complemento</label><br>
+            <input type="text" name="complement" id="icomplement"><br>
+            <label for="icity">Cidade</label><br>
+            <input type="text" name="city" id="icity"><br>
+            <label for="istate">Estado</label><br>
+            <input type="text" name="state" id="istate"><br>
+            <label for="icep">CEP</label><br>
+            <input type="text" name="cep" id="icep"><br>
         <div class="mt-4">Telefone</div>   
-            <label for="icellphone">Celular</label>
-            <input type="text" name="cellphone" id="icellphone">
-            <label for="icellphone2">Celular2</label>
-            <input type="text" name="cellphone2" id="icellphone2"> 
+            <label for="icellphone">Celular</label><br>
+            <input type="text" name="cellphone" id="icellphone"><br>
+            <label for="icellphone2">Celular2</label><br>
+            <input type="text" name="cellphone2" id="icellphone2"><br>
         <div class="mt-4">
             <button type="submit" class="bg-red-400 px-4 py-1 rounded-xl text-white ring-1">Cadastrar</button>
         </div>
@@ -49,7 +51,7 @@
 
 @section('footer')
     <footer>
-        <div><a href="{{ route('start') }}">homepage</a></div>
+        <div class="text-center"><a href="{{ route('start') }}">homepage</a></div>
     </footer>
 @endsection
 </html>

@@ -9,11 +9,13 @@
 <header>
     <div>HOME</div>
 </header>
-<body>
-    <a href=" {{route ('index.client') }}">Cliente</a>
-    <a href=" {{route ('index.employee') }}">Colaborador</a>
-    <a href=" {{route ('index.user') }}">Usuário</a>
-</body>
+<div class="content bg-gradient-to-br from-blue-600 to-green-400 p-2 m-2 border-2 border-yellow-200 rounded-xl">
+    <body>
+        <a href=" {{route ('index.client') }}">Cliente</a>
+        <a href=" {{route ('index.employee') }}">Colaborador</a>
+        <a href=" {{route ('index.user') }}">Usuário</a>
+    </body>
+</div>
 <footer>
     <script src="https://cdn.tailwindcss.com"></script>
     <a href=" {{ route('search') }}">Busca</a>
