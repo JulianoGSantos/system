@@ -11,7 +11,7 @@
     <head class="text-center">
         @yield('header')
     </head>
-    <div class="content bg-gradient-to-br from-blue-600 to-green-400 p-2 m-2 border-2 border-yellow-200 rounded-xl">
+    <div class="content grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
         @yield('content')
     </div>
     <footer>
