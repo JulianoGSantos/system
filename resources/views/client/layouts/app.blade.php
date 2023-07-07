@@ -7,16 +7,15 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="w-9/12 h-screen bg-gray-200">
-    <head class="text-center">
+<body class="w-8/12 h-screen bg-gray-200">
+    <head class="header bg-green-500 ml-60">
         @yield('header')
     </head>
-    <div class="content bg-blue-200 flex flex-basis-10 rounded-2xl border-2 border-sky-600 ml-40 pl-28">
+    <div class="content bg-blue-200 rounded-2xl border-2 border-sky-600 font-semibold text-sm leading-6 mt-5 ml-60 pl-16">
         @yield('content')
     </div>
-    <footer>
+    <footer class="footer ml-60">
         @yield('footer')
     </footer>
-    
 </body>
 </html>
