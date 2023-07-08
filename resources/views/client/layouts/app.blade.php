@@ -11,7 +11,7 @@
     <head class="header bg-green-500 ml-60">
         @yield('header')
     </head>
-    <div class="content bg-blue-200 rounded-2xl border-2 border-sky-600 font-semibold text-sm leading-6 mt-5 ml-60 pl-16">
+    <div class="content bg-white rounded-2xl border-2 border-sky-600 leading-6 mt-5 ml-60 pl-16">
         @yield('content')
     </div>
     <footer class="footer ml-60">
