@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Clientes</title>
+    <title>Pacientes</title>
+    @extends('client.layouts.app')
 </head>
-<body>
-    @foreach ($clients as $client)
-        <tr>
-            <div>{{ $client->name}}
-            {{ $client->cpf}}</div> <td><a href=" {{ route('show.client', $client->id) }}">detalhes </a></td><td><a href=" {{ route('edit.client', $client->id) }}"> editar</a></td>
-        </tr>
-    @endforeach
-</body>
-<footer>
-    <div><a href="{{ route('start') }}">homepage</a></div>
-</footer>
+@section('content')
+    <body>
+        <div>PACIENTES</div>
+        @foreach ($clients as $client)
+                <div class="grid grid-cols-2">
+                    <div class="mt-2">
+                        {{ $client->name}}
+                    </div> 
+                    <div class="mt-2 mb-2 font-semibold">
+                        <a href=" {{ route('show.client', $client->id) }}">detalhes </a><a href=" {{ route('edit.client', $client->id) }}"> editar</a>
+                    </div>
+                </div>
+        @endforeach
+    </body>
+@endsection
+@section('footer')
+    <footer>
+        <div class="text-center text-blue-600"><a href="{{ route('start') }}">página inicial</a></div>
+    </footer>
+@endsection
 </html>

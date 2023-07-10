@@ -34,6 +34,8 @@ class BoardController extends Controller
         $client->cellphone2 = $request->cellphone2;
 
         $client->save();
+
+        return redirect('home');
     }
 
     public function searchclient(Board $client)
