@@ -76,8 +76,8 @@
 
 @section('footer')
     <footer>
-        <div class="text-center text-blue-600"><a href="{{ route('start') }}">página inicial</a></div>
         <div class="text-center text-blue-600"><a href="javascript:history.back()">voltar</a></div>
+        <div class="text-center text-blue-600"><a href="{{ route('start') }}">página inicial</a></div>
     </footer>
 @endsection
 </html>

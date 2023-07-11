@@ -9,21 +9,23 @@
 </head>
 @section('content')  
     <header>
-        <h1> {{ $client->name}} </h1>
+        <h1 class="text-xl">Nome: {{ $client->name}} </h1>
     </header> 
     <body>
-        <ul>
-            <li>{{$client->cpf}}</li>
-            <li>{{$client->email}}</li> 
-            <li>{{$client->street}}</li> 
-            <li>{{$client->number}}</li>
-            <li>{{$client->complement}}</li> 
-            <li>{{$client->city}}</li> 
-            <li>{{$client->state}}</li> 
-            <li>{{$client->cep}}</li> 
-            <li>{{$client->cellphone}}</li> 
-            <li>{{$client->cellphone2}}</li>
-        </ul>
+        <div class="text-xl">
+            <ul>
+                <li>CPF: {{$client->cpf}}</li>
+                <li>Email: {{$client->email}}</li> 
+                <li>Rua: {{$client->street}}</li> 
+                <li>Número: {{$client->number}}</li>
+                <li>Bairro: {{$client->complement}}</li> 
+                <li>Cidade: {{$client->city}}</li> 
+                <li>Estado: {{$client->state}}</li> 
+                <li>CEP: {{$client->cep}}</li> 
+                <li>Celular: {{$client->cellphone}}</li> 
+                <li>Celular 2: {{$client->cellphone2}}</li>
+            </ul>
+        </div>
         <form action=" {{ route('destroy.client', $client->id) }}" method="POST">
             @csrf
             @method('DELETE')
@@ -33,7 +35,10 @@
         </form>
     </body>
 @endsection
-<footer>
-    <div class="text-center text-blue-600"><a href="javascript:history.back()">voltar</a></div>
-</footer>
+@section('footer')
+    <footer>
+        <div class="text-center text-blue-600"><a href="javascript:history.back()">voltar</a></div>
+        <div class="text-center text-blue-600"><a href="{{ route('start') }}">página inicial</a></div>
+    </footer>
+@endsection
 </html>

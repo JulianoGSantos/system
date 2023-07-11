@@ -84,7 +84,7 @@ class BoardController extends Controller
         'cellphone2'
         ]));
 
-        return view('indexclient', compact('client'));
+        return view('client/showclient', compact('client'));
     }
 
     public function destroyclient(Board $client, string $id)
