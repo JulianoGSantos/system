@@ -15,8 +15,8 @@
     </header>
     <main>
         <div class=" w-full h-96 grid grid-cols-2 justify-items-center">
-            <div class=""><a href=" {{route ('index.client') }}">CADASTRAR PACIENTE</a></div>
-            <div class=""><a href=" {{ route('search') }}">BUSCAR PACIENTE</a></div>
+            <div class=""><a href=" {{route ('index.client') }}"><div class="grid justify-items-center mt-44 bg-blue-600 h-8 w-64 rounded-lg ring-2 ring-black">CADASTRAR PACIENTE</div></a></div>
+            <div class=""><a href=" {{ route('search.client') }}"><div class="grid justify-items-center mt-44 bg-green-400 h-8 w-64 rounded-lg ring-2 ring-black">BUSCAR PACIENTE</div></a></div>
         </div>
     </main>
     <footer>
