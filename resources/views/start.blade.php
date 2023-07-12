@@ -5,23 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    @extends('client.layouts.home')
 </head>
-<header>
-    <div>HOME</div>
-</header>
-<div class="content bg-gradient-to-br from-blue-600 to-green-400 p-2 m-2 border-2 border-yellow-200 rounded-xl">
-    <body>
-        <a href=" {{route ('index.client') }}">CADASTRAR PACIENTE</a>
-    </body>
-</div>
-<footer>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <a href=" {{ route('search') }}">Busca</a>
-    <div class="container mx-auto px-4 py-8">
-        <form action=" {{ route('logout') }}" method="POST" class="shadow bg-purple-500 hover:bg-purple-40 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
-        @csrf
-        <button type="submit" class="bg-red-400 px-4 py-1 rounded-xl text-white ring-1">Logout</button>
-        </form>
-    </div>
-</footer>
+<body>
+    <header>
+        <div class=" grid justify-items-center w-screen h-36 content bg-gradient-to-br from-blue-600 to-green-400 p-2">
+            <div class=" text-4xl">CONTROLE DE DADOS PACIENTES</div>
+        </div>
+    </header>
+    <main>
+        <div class=" w-full h-96 grid grid-cols-2 justify-items-center">
+            <div class=""><a href=" {{route ('index.client') }}">CADASTRAR PACIENTE</a></div>
+            <div class=""><a href=" {{ route('search') }}">BUSCAR PACIENTE</a></div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <form action=" {{ route('logout') }}" method="POST">
+            @csrf
+            <div class=" grid justify-items-center w-screen h-36 bg-black">
+                <div class=" h-8 mt-16">
+                    <button type="submit" class=" bg-red-400 px-4 py-1 rounded-xl text-white ring-1 flex ">Logout</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </footer>
+</body>
+
 </html>

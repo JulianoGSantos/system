@@ -13,8 +13,8 @@
     </header> 
     <body>
         <div class="text-xl">
-            <ul>
-                <li>CPF: {{$client->cpf}}</li>
+            <ul class="divide-y divide-slate-400">
+                <li><div class="  mt-3 ">CPF: {{$client->cpf}}</div></li>
                 <li>Email: {{$client->email}}</li> 
                 <li>Rua: {{$client->street}}</li> 
                 <li>Número: {{$client->number}}</li>
