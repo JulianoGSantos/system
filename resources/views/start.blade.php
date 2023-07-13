@@ -25,7 +25,7 @@
         <div class="container">
             <form action=" {{ route('logout') }}" method="POST">
             @csrf
-            <div class=" grid mt-20 justify-items-center w-screen h-36 bg-black">
+            <div class=" grid mt-4 justify-items-center w-screen h-36 bg-black">
                 <div class=" h-8 mt-16">
                     <button type="submit" class=" bg-red-400 px-4 py-1 rounded-xl text-white ring-1 flex ">Logout</button>
                 </div>
