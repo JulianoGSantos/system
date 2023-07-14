@@ -17,7 +17,10 @@
             <div class="grid grid-cols-2">
                 <div class="mt-2">
                     <label for="iname" class="font-semibold text-sm">Nome</label><br>
-                    <input type="text" name="name" id="iname" style="height: 35px" class="rounded-md ring-2">
+                    <input type="text" name="name" id="iname" style="height: 35px" class="rounded-md ring-2" value=" {{ old('name')}}"><br>
+                    @error('name')
+                        {{ $message }}
+                    @enderror
                 </div>
                 <div class="mt-2">
                     <label for="icpf" class="font-semibold text-sm">CPF</label><br>
