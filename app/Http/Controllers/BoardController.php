@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RequestClient;
 use App\Models\Board;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class BoardController extends Controller
         return view('indexclient');
     }
 
-    public function storeclient(Request $request)
+    public function storeclient(RequestClient $request)
     {
         $client = new Board();
 

@@ -11,7 +11,7 @@ class RequestClient extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,17 @@ class RequestClient extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required',
+            'cpf' => 'nullable',
+            'email' => 'required',
+            'street' => 'required',
+            'number' => 'required',
+            'complement' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'cep' => 'nullable',
+            'cellphone' => 'required',
+            'cellphone2' => 'nullable',
         ];
     }
 }
