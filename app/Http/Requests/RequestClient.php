@@ -35,4 +35,18 @@ class RequestClient extends FormRequest
             'cellphone2' => 'nullable',
         ];
     }
+
+    public function messages()
+    {
+        return[
+            'name.required' => 'O campo nome é obrigatório.',
+            'email.required' => 'O campo email é obrigatório',
+            'street.required' => 'O campo rua é obrigatório.',
+            'number.required' => 'O campo número é obrigatório',
+            'complement.required' => 'O campo bairro é obrigatório',
+            'city.required' => 'O campo cidade é obrigatório',
+            'state.required' => 'O campo estado é obrigatório',
+            'cellphone.required' => 'O campo telefone é obrigatório'
+        ];
+    }
 }
