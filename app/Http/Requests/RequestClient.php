@@ -23,16 +23,16 @@ class RequestClient extends FormRequest
     {
         return [
             'name' => 'required',
-            'cpf' => 'nullable',
-            'email' => 'required',
+            'cpf' => 'nullable|cpf|formato_cpf',
+            'email' => 'required|email',
             'street' => 'required',
             'number' => 'required',
             'complement' => 'required',
             'city' => 'required',
             'state' => 'required',
-            'cep' => 'nullable',
-            'cellphone' => 'required',
-            'cellphone2' => 'nullable',
+            'cep' => 'nullable|formato_cep',
+            'cellphone' => 'required|celular_com_ddd',
+            'cellphone2' => 'nullable|celular_com_ddd',
         ];
     }
 

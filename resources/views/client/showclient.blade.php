@@ -9,7 +9,7 @@
 </head>
 @section('content')  
     <header>
-        <h1 class="text-xl">Nome: {{ $client->name}} </h1>
+        <h1 class="mt-5 text-xl">Nome: {{ $client->name}} </h1>
     </header> 
     <body>
         <div class="text-xl">

@@ -9,7 +9,7 @@
 </head>
 @section('content')
     <body>
-        <div>PACIENTES</div>
+        <div class="mt-2">PACIENTES</div>
         @foreach ($clients as $client)
                 <div class="grid grid-cols-2">
                     <div class="mt-4 mb-2 text-xl ">
