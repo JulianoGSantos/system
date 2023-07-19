@@ -13,7 +13,7 @@
         <form action=" {{ route('store.client') }}" method="POST">
         @csrf
         <div>
-            <div class="mt-2">CADASTRO DE PACIENTES</div>
+            <div class="mt-5">CADASTRO DE PACIENTES</div>
             <div class="grid grid-cols-2">
 
                 <div class="mt-2">
@@ -134,7 +134,7 @@
                     @enderror
                 </div>
             </div>
-            </div>
+        </div>
             
             <div class="mt-4 mb-5">
                 <button type="submit" class="bg-red-400 px-4 py-1 rounded-xl text-white ring-1">Cadastrar</button>

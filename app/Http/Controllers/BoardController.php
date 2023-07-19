@@ -64,7 +64,7 @@ class BoardController extends Controller
         return view('client/editclient', compact('client'));
     }
 
-    public function updateclient(Request $request, Board $client, string $id)
+    public function updateclient(RequestClient $request, Board $client, string $id)
     {
         if(!$client = $client->find($id))
         {

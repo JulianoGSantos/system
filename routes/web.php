@@ -36,18 +36,6 @@ Route::middleware(['auth'])->group(function(){
     Route::put('cliente/{id}', [BoardController::class, 'updateclient'])->name('update.client');
     Route::delete('cliente/{id}', [BoardController::class, 'destroyclient'])->name('destroy.client');
 
-    //Colaborador
-    Route::get('funcionario', [EmployeeController::class, 'indexemployee'])->name('index.employee');
-    Route::post('funcionario', [EmployeeController::class, 'storeemployee'])->name('store.employee');
-    Route::get('busca/funcionario', [EmployeeController::class, 'searchemployee'])->name('search.employee');
-    Route::get('funcionario/{id}', [EmployeeController::class, 'showemployee'])->name('show.employee');
-    Route::get('funcionario/{id}/edit', [EmployeeController::class, 'editemployee'])->name('edit.employee');
-    Route::put('funcionario/{id}', [EmployeeController::class, 'updateemployee'])->name('update.employee');
-    Route::delete('funcionario/{id}', [EmployeeController::class, 'destroyemployee'])->name('destroy.employee');
-
-    //Usuário
-    Route::get('usuario', [UserController::class, 'indexuser'])->name('index.user');
 });
-
 
 require __DIR__.'/auth.php';

@@ -11,11 +11,11 @@
     <body>
         <div class="mt-2">PACIENTES</div>
         @foreach ($clients as $client)
-                <div class="grid grid-cols-2">
-                    <div class="mt-4 mb-2 text-xl ">
+                <div class="grid grid-cols-2 divide-y divide-slate-400 ">
+                    <div class="mt-4 mb-2 text-xl">
                         {{ $client->name}}
                     </div> 
-                    <div class="mt-5 mb-2 font-semibold">
+                    <div class="mt-5 mb-5 font-semibold">
                         <a href=" {{ route('show.client', $client->id) }}">detalhes |</a><a href=" {{ route('edit.client', $client->id) }}"> editar</a>
                     </div>
                 </div>
