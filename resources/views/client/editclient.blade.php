@@ -42,7 +42,7 @@
                         <input type="text" name="number" id="inumber" style="height: 35px" class="rounded-md ring-2" value="{{$client->number}}"><br>
                     </div>
                     <div class="mt-2">
-                        <label for="icomplement" class="font-semibold text-sm">Complemento</label><br>
+                        <label for="icomplement" class="font-semibold text-sm">Bairro</label><br>
                         <input type="text" name="complement" id="icomplement" style="height: 35px" class="rounded-md ring-2" value="{{$client->complement}}"><br>
                     </div>
                     <div class="mt-2">
