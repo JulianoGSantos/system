@@ -25,6 +25,7 @@ class RequestClient extends FormRequest
             'name' => 'required',
             'cpf' => 'nullable|cpf|formato_cpf',
             'email' => 'required|email',
+            'birth' => 'nullable|date',
             'street' => 'required',
             'number' => 'required',
             'complement' => 'required',

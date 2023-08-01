@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProfileController;
@@ -36,6 +37,8 @@ Route::middleware(['auth'])->group(function(){
     Route::put('cliente/{id}', [BoardController::class, 'updateclient'])->name('update.client');
     Route::delete('cliente/{id}', [BoardController::class, 'destroyclient'])->name('destroy.client');
 
+    //Consulta
+    Route::get('consulta', [AppointmentController::class, 'indexappointment'])->name('index.apointment');
 });
 
 require __DIR__.'/auth.php';

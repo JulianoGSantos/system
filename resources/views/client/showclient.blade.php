@@ -16,6 +16,7 @@
             <ul class="divide-y divide-slate-400">
                 <li><div class="  mt-3 ">CPF: {{$client->cpf}}</div></li>
                 <li>Email: {{$client->email}}</li> 
+                <li>Nascimento: {{date('d/m/Y', strtotime($client->birth))}}</li>
                 <li>Rua: {{$client->street}}</li> 
                 <li>Número: {{$client->number}}</li>
                 <li>Bairro: {{$client->complement}}</li> 

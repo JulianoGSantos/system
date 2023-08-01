@@ -24,7 +24,8 @@ class BoardController extends Controller
 
         $client->name = $request->name;
         $client->cpf = $request->cpf;
-        $client->email = $request->email; 
+        $client->email = $request->email;
+        $client->birth = $request->birth; 
         $client->street = $request->street; 
         $client->number = $request->number; 
         $client->complement = $request->complement; 
@@ -74,7 +75,8 @@ class BoardController extends Controller
         $client->update($request->only([
         'name',
         'cpf',
-        'email', 
+        'email',
+        'birth', 
         'street', 
         'number', 
         'complement', 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastro de clientes</title>
+    <title>Cadastro de consultas</title>
     @extends('client.layouts.app')
 </head>
 
@@ -13,7 +13,7 @@
         <form action=" {{ route('store.client') }}" method="POST">
         @csrf
         <div>
-            <div class="mt-5">CADASTRO DE PACIENTES</div>
+            <div class="mt-5">CADASTRO DE CONSULTAS</div>
             <div class="grid grid-cols-2">
 
                 <div class="mt-2">

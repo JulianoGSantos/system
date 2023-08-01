@@ -21,5 +21,6 @@ class Board extends Model
         'cep',
         'cellphone',
         'cellphone2',
+        'birth'
     ];
 }
