@@ -18,6 +18,7 @@
             <div class="grid h-3 mt-14"><img src="cadastro.png" alt=""></div>
             <div class="grid h-3 mt-14"><img src="cadastro.png" alt=""></div>
             <div class=""><a href=" {{route ('index.client') }}"><div class="grid justify-items-center mt-44 bg-blue-600 h-8 w-64 rounded-lg ring-2 ring-black">CADASTRAR PACIENTE</div></a></div>
+            <div class=""><a href=" {{ route('index.event') }}"><div class="grid justify-items-center mt-44 bg-green-400 h-8 w-64 rounded-lg ring-2 ring-black">CADASTRAR CONSULTA</div></a></div>
             <div class=""><a href=" {{ route('search.client') }}"><div class="grid justify-items-center mt-44 bg-green-400 h-8 w-64 rounded-lg ring-2 ring-black">BUSCAR PACIENTE</div></a></div>
         </div>
     </main>

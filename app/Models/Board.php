@@ -23,4 +23,9 @@ class Board extends Model
         'cellphone2',
         'birth'
     ];
+
+    public function events()
+    {
+        return $this->hasMany(Event::class);
+    }
 }

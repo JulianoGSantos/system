@@ -3,6 +3,7 @@
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -38,7 +39,8 @@ Route::middleware(['auth'])->group(function(){
     Route::delete('cliente/{id}', [BoardController::class, 'destroyclient'])->name('destroy.client');
 
     //Consulta
-    Route::get('consulta', [AppointmentController::class, 'indexappointment'])->name('index.apointment');
+    Route::get('consulta', [EventController::class, 'indexevent'])->name('index.event');
+    Route::post('consulta', [EventController::class, 'storeevent'])->name('store.event');
 });
 
 require __DIR__.'/auth.php';
