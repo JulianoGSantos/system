@@ -41,6 +41,11 @@ Route::middleware(['auth'])->group(function(){
     //Consulta
     Route::get('consulta', [EventController::class, 'indexevent'])->name('index.event');
     Route::post('consulta', [EventController::class, 'storeevent'])->name('store.event');
+    Route::get('busca/consulta', [EventController::class, 'searchevent'])->name('search.event');
+    Route::get('consulta/{id}', [EventController::class, 'showevent'])->name('show.event');
+    Route::get('consulta/{id}/edit', [EventController::class, 'editevent'])->name('edit.event');
+    Route::put('consulta/{id}', [EventController::class, 'updateevent'])->name('update.event');
+    Route::delete('consulta/{id}', [EventController::class, 'destroyevent'])->name('destroy.event');
 });
 
 require __DIR__.'/auth.php';

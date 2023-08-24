@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\RequestClient;
+use App\Http\Requests\RequestEvent;
 use App\Models\Board;
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class BoardController extends Controller
@@ -47,13 +49,15 @@ class BoardController extends Controller
         return view('client/searchclient', compact('clients'));
     }
 
-    public function showclient(string $id)
+    public function showclient(string $id, Event $event)
     {
+        $events = $event->all();
+
         if(!$client = Board::find($id))
         {
             return back();
         }
-        return view('client/showclient', compact('client'));
+        return view('client/showclient', compact('client', 'events'));
     }
 
     public function editclient(Board $client, string $id)

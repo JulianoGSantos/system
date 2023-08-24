@@ -16,7 +16,7 @@
                         {{ $client->name}}
                     </div> 
                     <div class="mt-5 mb-5 font-semibold">
-                        <a href=" {{ route('show.client', $client->id) }}">detalhes |</a><a href=" {{ route('edit.client', $client->id) }}"> editar</a>
+                        <a href=" {{ route('show.client', $client->id) }} ">detalhes |</a> <a href=" {{ route('edit.client', $client->id) }} "> editar</a>
                     </div>
                 </div>
         @endforeach

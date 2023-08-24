@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Detalhes do Cliente</title>
+    <title>Detalhes da Consulta</title>
     @extends('client.layouts.appevent')
 </head>
 @section('content')  
     <header>
-        <h1 class="mt-5  text-4xl">{{ $client->name}} </h1>
+        <h1 class="mt-5  text-4xl">{{ $event->name}} </h1>
     </header> 
     <body>
         <div class="text-xl">
@@ -17,14 +17,7 @@
                 <li><div class="  mt-3 ">CPF: {{$client->cpf}}</div></li>
                 <li>Email: {{$client->email}}</li> 
                 <li>Nascimento: {{date('d/m/Y', strtotime($client->birth))}}</li>
-                <li>Rua: {{$client->street}}</li> 
-                <li>Número: {{$client->number}}</li>
-                <li>Bairro: {{$client->complement}}</li> 
-                <li>Cidade: {{$client->city}}</li> 
-                <li>Estado: {{$client->state}}</li> 
-                <li>CEP: {{$client->cep}}</li> 
-                <li>Celular: {{$client->cellphone}}</li> 
-                <li>Celular 2: {{$client->cellphone2}}</li>
+                
             </ul>
         </div>
         <form action=" {{ route('destroy.client', $client->id) }}" method="POST">
@@ -50,8 +43,8 @@
         @csrf
         <div>
             <div class="mt-5 mb-0">AVALIAÇÃO </div>
-                <input type="hidden" name="boards_id" id="iboards_id" value="{{ $client->id }}">
-                <input type="hidden" name="name" id="iname" value="{{ $client->name }}">
+                <input type="hidden" name="boards_id" id="iboards_id"value=" {{ $client->id }}"><br>
+                <input type="hidden" name="name" id="iname" value= {{ $client->name }} ><br>
             
             <div class="grid">
                 <div class="">
@@ -80,17 +73,6 @@
             </div>
         </form>
     </div>
-@endsection
-
-@section('list')
-    <h1 class=""> HISTÓRICO DE CONSULTAS</h1>
-        
-            <div class="grid grid-cols-2"> 
-                <div>
-                    
-                </div>
-            </div>
-        
 @endsection
 
 </html>

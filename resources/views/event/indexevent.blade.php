@@ -13,8 +13,8 @@
         <form action=" {{ route('store.event') }}" method="POST">
         @csrf
         <div>
-            <div class="mt-5">CADASTRO DE PACIENTES</div>
-            <div class="grid grid-cols-2">
+            <div class="mt-5">CADASTRO DE CONSULTA</div>
+            <div class="grid">
 
                 <div class="mt-2">
                     <label for="iboards_id" class="font-semibold text-sm">Cód.</label><br>
@@ -38,7 +38,7 @@
 
             </div>
 
-            <div class="grid grid-cols-2">
+            <div class="grid">
                 <div class="mt-2">
                     <label for="idescription" class="font-semibold text-sm">Descrição</label><br>
                     <input type="text" name="description" id="idescription" style="height: 35px" class=" form-control @error('description') is invalid @enderror rounded-md ring-2 opacity-60">
