@@ -8,6 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="w-8/12 h-screen bg-gray-200">
+    @if(session('sucess'))
+        <p class="sucess">{{ session('sucess') }}</p>
+    @endif
     <head class="header bg-green-500 ml-60">
         @yield('header')
     </head>

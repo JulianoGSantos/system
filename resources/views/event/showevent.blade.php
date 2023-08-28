@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Detalhes da Consulta</title>
-    @extends('client.layouts.appevent')
+    <title>{{ date('d/m/Y', strtotime($event->date))}}</title>
+    @extends('client.layouts.app')
 </head>
 @section('content')  
     <header>
-        <h1 class="mt-5  text-4xl">{{ $event->name}} </h1>
+        <h1 class="mt-5  text-4xl">{{ date('d/m/Y', strtotime($event->date))}} </h1>
     </header> 
     <body>
         <div class="text-xl">
             <ul class="divide-y divide-slate-400">
-                <li><div class="  mt-3 ">CPF: {{$client->cpf}}</div></li>
-                <li>Email: {{$client->email}}</li> 
-                <li>Nascimento: {{date('d/m/Y', strtotime($client->birth))}}</li>
-                
+                <li><div class="mt-3">Descrição: {{$event->description}}</div></li>
+                <li><div class="mt-3">Nome: {{$event->name}}</div></li>
             </ul>
         </div>
-        <form action=" {{ route('destroy.client', $client->id) }}" method="POST">
+        <form action=" {{ route('destroy.event', $event->id) }}" method="POST">
             @csrf
             @method('DELETE')
             <div class="mt-4 mb-5">
@@ -35,44 +33,6 @@
         <div class="text-center text-blue-600"><a href="javascript:history.back()">voltar</a></div>
         <div class="text-center text-blue-600"><a href="{{ route('start') }}">página inicial</a></div>
     </footer>
-@endsection
-
-@section('event')
-    <div>
-        <form action=" {{ route('store.event') }}" method="POST">
-        @csrf
-        <div>
-            <div class="mt-5 mb-0">AVALIAÇÃO </div>
-                <input type="hidden" name="boards_id" id="iboards_id"value=" {{ $client->id }}"><br>
-                <input type="hidden" name="name" id="iname" value= {{ $client->name }} ><br>
-            
-            <div class="grid">
-                <div class="">
-                    <label for="idate" class="font-semibold text-sm">Data</label><br>
-                    <input type="date" name="date" id="idate" style="height: 35px" class=" form-control @error('date') is invalid @enderror rounded-md ring-2 opacity-60" >
-                    @error('date')
-                    <div class="invalid-feedback text-red-600">
-                        {{$message}}
-                    </div>
-                    @enderror
-                </div>
-
-                <div class="mt-2 h-48">
-                    <label for="idescription" class="font-semibold text-sm">Descrição</label><br>
-                    <textarea name="description" id="idescription" style="height: 210px" cols="45" class=" form-control @error('description') is invalid @enderror rounded-md ring-2 opacity-60"></textarea>
-                    @error('description')
-                        <div class=" invalid-feedback text-red-600">
-                            {{$message}}
-                        </div>
-                    @enderror
-                </div>
-            </div>
-
-            <div class=" mt-16 ">
-                <button type="submit" class="bg-red-400 px-4 py-1 rounded-xl text-white ring-1">Cadastrar</button>
-            </div>
-        </form>
-    </div>
 @endsection
 
 </html>

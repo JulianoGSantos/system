@@ -13,7 +13,7 @@
             <div class="mt-5 text-xl">HISTÓRICO DE CONSULTAS</div>
             <div class="grid grid-cols-2 mt-5">
                 <div class="grid mr-5">
-                    <input type="search" name="search" id="isearch" placeholder=" busque um paciente" style="height: 35px" class=" form-control rounded-md ring-2  opacity-60">
+                    <input type="search" name="search" id="isearch" placeholder="   busque um paciente" style="height: 35px" class=" form-control rounded-md ring-2 p-2 opacity-60">
                 </div>
                 <div class="mb-5 text-2xl">
                     <button type="submit" class="bg-red-400 px-1 py-1 rounded-xl text-white text-lg ring-1">PESQUISAR</button>

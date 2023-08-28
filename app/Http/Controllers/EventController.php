@@ -74,12 +74,12 @@ class EventController extends Controller
 
     public function destroyevent(Event $event, string $id)
     {
-        if(!$client = $event->find($id))
+        if(!$event = $event->find($id))
         {
             return back();
         }
         $event->delete();
 
-        return view('indexevent');
+        return view('start')->with('sucess', 'Consulta deletada com sucesso');
     }
 }

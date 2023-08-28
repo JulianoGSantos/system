@@ -66,7 +66,7 @@
 
                 <div class="mt-2 h-48">
                     <label for="idescription" class="font-semibold text-sm">Descrição</label><br>
-                    <textarea name="description" id="idescription" style="height: 210px" cols="45" class=" form-control @error('description') is invalid @enderror rounded-md ring-2 opacity-60"></textarea>
+                    <input name="description" id="idescription" style="height: 35px" class=" form-control @error('description') is invalid @enderror rounded-md ring-2 w-96 opacity-60"></textarea>
                     @error('description')
                         <div class=" invalid-feedback text-red-600">
                             {{$message}}
@@ -75,22 +75,11 @@
                 </div>
             </div>
 
-            <div class=" mt-16 ">
+            <div class=" mt-24 ">
                 <button type="submit" class="bg-red-400 px-4 py-1 rounded-xl text-white ring-1">Cadastrar</button>
             </div>
         </form>
     </div>
-@endsection
-
-@section('list')
-    <h1 class=""> HISTÓRICO DE CONSULTAS</h1>
-        
-            <div class="grid grid-cols-2"> 
-                <div>
-                    
-                </div>
-            </div>
-        
 @endsection
 
 </html>

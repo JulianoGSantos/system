@@ -46,6 +46,9 @@ class BoardController extends Controller
     {
         $clients = $client->all();
 
+        $search_client = request('search');
+        $clients = Board::where('name', 'like', '%'.$search_client.'%')->get();
+
         return view('client/searchclient', compact('clients'));
     }
 

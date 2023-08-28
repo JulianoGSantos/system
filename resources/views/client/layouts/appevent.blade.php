@@ -19,11 +19,6 @@
             @yield('event')
         </div>
     </div>
-    <div>
-        <div class="list bg-white rounded-2xl border-2 border-sky-600 leading-6 mt-5 ml-10 pl-16">
-            @yield('list')
-        </div>
-    </div>
     <footer class="footer ml-60">
         @yield('footer')
     </footer>
