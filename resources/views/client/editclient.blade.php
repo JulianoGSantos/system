@@ -51,7 +51,7 @@
 
                 <div class="mt-2">
                     <label for="ibirth" class="font-semibold text-sm @error ('birth') is-invalid @enderror">Nascimento</label><br>
-                    <input type="text" name="birth" id="ibirth" style="height: 35px" class="rounded-md ring-2 opacity-60" value="{{ date('d/m/Y', strtotime($client->birth)) }}">
+                    <input type="date" name="birth" id="ibirth" style="height: 35px" class="rounded-md ring-2 opacity-60" value="{{ date('d/m/Y', strtotime($client->birth)) }}">
                     @error('birth')
                         <div class=" invalid-feedback text-red-600">
                             {{$message}}
@@ -147,8 +147,14 @@
 @endsection
 @section('footer')
     <footer>
-        <div class="text-center text-blue-600" ><a href="javascript:history.back()">voltar</a></div>
-        <div class="text-center text-blue-600"><a href="{{ route('start') }}">página inicial</a></div>
+        @section('footer')
+    <footer>
+        <div class="flex justify-center grid-cols-2">
+            <div class="bg-blue-400 mt-2 mb-5 w-20 px-4 py-1 rounded-xl text-white ring-1"><a href="javascript:history.back()">voltar</a></div>
+            <div class="bg-blue-400 ml-2 mb-5 mt-2 px-4 py-1 rounded-xl text-white ring-1"><a href="{{ route('start') }}">página inicial</a></div>
+        </div>
+    </footer>
+@endsection
     </footer>
 @endsection
 </html>

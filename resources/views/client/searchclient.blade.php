@@ -35,8 +35,10 @@
 @endsection
 @section('footer')
     <footer>
-        <div class="text-center text-blue-600"><a href="javascript:history.back()">voltar</a></div>
-        <div class="text-center text-blue-600"><a href="{{ route('start') }}">página inicial</a></div>
+        <div class="flex justify-center grid-cols-2">
+            <div class="bg-blue-400 mt-2 mb-5 w-20 px-4 py-1 rounded-xl text-white ring-1"><a href="javascript:history.back()">voltar</a></div>
+            <div class="bg-blue-400 ml-2 mt-2 mb-5 px-4 py-1 rounded-xl text-white ring-1"><a href="{{ route('start') }}">página inicial</a></div>
+        </div>
     </footer>
 @endsection
 </html>
