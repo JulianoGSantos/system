@@ -10,17 +10,17 @@
 <body>
     <header>
         <div class=" grid justify-center w-screen h-32 content bg-blue-400 p-12">
-            <div class=" text-4xl">CONTROLE DE DADOS PACIENTES</div>
+            <div class=" min-[200px]:text-lg min-[200px]:text-center sm:text-xs md:text-4xl lg:text-4xl">CONTROLE DE DADOS PACIENTES</div>
         </div>
     </header>
     <main>
-        <div class=" w-full h-96 grid grid-cols-3 justify-items-center">
-            <div class="grid h-3 mt-14"><img src="paciente.png" alt=""></div>
-            <div class="grid h-3 mt-14"><img src="formulario.png" alt=""></div>
-            <div class="grid h-3 mt-14"><img src="calendario.png" alt=""></div>
-            <div class=""><a href=" {{ route ('index.client') }}"><div class="grid justify-items-center mt-44 bg-slate-400 h-8 w-64 rounded-lg ring-2 ring-black">CADASTRAR PACIENTE</div></a></div>
-            <div class=""><a href=" {{ route('search.client') }}"><div class="grid justify-items-center mt-44 bg-slate-400 h-8 w-64 rounded-lg ring-2 ring-black">BUSCAR PACIENTE</div></a></div>
-            <div class=""><a href=" {{ route('search.event') }}"><div class="grid justify-items-center mt-44 bg-slate-400 h-8 w-64 rounded-lg ring-2 ring-black">BUSCAR CONSULTA</div></a></div>
+        <div class=" w-screen h-96 min-[200px]:text-xs min-[200px]:text-center grid grid-cols-3 justify-items-center">
+            <div class="grid h-3 mt-14"><img src="paciente.png"></div>
+            <div class="grid h-3 mt-14"><img src="formulario.png"></div>
+            <div class="grid h-3 mt-14"><img src="calendario.png"></div>
+            <div class="sm:text-xs md:text-base lg:text-lg"><a href=" {{ route ('index.client') }}"><div class="grid mt-44 text-center bg-slate-400 h-8 rounded-lg ring-2 ring-black">CADASTRAR PACIENTE</div></a></div>
+            <div class="sm:text-xs md:text-base lg:text-lg"><a href=" {{ route('search.client') }}"><div class="grid mt-44 text-center bg-slate-400 h-8 rounded-lg ring-2 ring-black">BUSCAR PACIENTE</div></a></div>
+            <div class="sm:text-xs md:text-base lg:text-lg"><a href=" {{ route('search.event') }}"><div class="grid mt-44 text-center bg-slate-400 h-8 rounded-lg ring-2 ring-black">BUSCAR CONSULTA</div></a></div>
         </div>
     </main>
     <footer>

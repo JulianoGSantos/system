@@ -7,17 +7,14 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="w-8/12 h-screen bg-gray-200">
-    @if(session('sucess'))
-        <p class="sucess">{{ session('sucess') }}</p>
-    @endif
-    <head class="header bg-green-500 ml-60">
+<body class="w-screen h-screen bg-gray-200">
+    <head class="header">
         @yield('header')
     </head>
-    <div class="content bg-white rounded-2xl border-2 border-sky-600 leading-6 mt-5 ml-60 pl-16">
+    <div class="content w-10/12 min-[200px]:text-xs min-[200px]:p-4 sm:text-xs md:text-base lg:text-lg bg-white rounded-2xl border-2 border-sky-600 m-auto mt-5 pl-16">
         @yield('content')
     </div>
-    <footer class="footer ml-60">
+    <footer class="footer m-auto">
         @yield('footer')
     </footer>
 </body>

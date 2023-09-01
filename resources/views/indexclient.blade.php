@@ -9,7 +9,7 @@
 </head>
 
 @section('content')
-    <body>
+    <body class=" sm:text-xs md:text-base lg:text-lg">
         <form action=" {{ route('store.client') }}" method="POST">
         @csrf
         <div>
@@ -17,8 +17,8 @@
             <div class="grid grid-cols-2">
 
                 <div class="mt-2">
-                    <label for="iname" class="font-semibold text-sm">Nome</label><br>
-                    <input type="text" name="name" id="iname" style="height: 35px" class=" form-control @error('name') is invalid @enderror rounded-md ring-2  opacity-60" value=" {{ old('name')}}"><br>
+                    <label for="iname" class="font-semibold">Nome</label><br>
+                    <input type="text" name="name" id="iname" style="height: 35px " class=" form-control @error('name') is invalid @enderror rounded-md ring-2  opacity-60" value=" {{ old('name')}}"><br>
                     @error('name')
                         <div class="invalid-feedback text-red-600">
                             {{$message}}
@@ -27,8 +27,8 @@
                 </div>
 
                 <div class="mt-2">
-                    <label for="icpf" class="font-semibold text-sm">CPF</label><br>
-                    <input type="text" name="cpf" id="icpf" style="height: 35px" class=" form-control @error('cpf') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('cpf')}}" >
+                    <label for="icpf" class="font-semibold">CPF</label><br>
+                    <input type="text" name="cpf" id="icpf" style="height: 35px " class=" form-control @error('cpf') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('cpf')}}" >
                     @error('cpf')
                     <div class="invalid-feedback text-red-600">
                         {{$message}}
@@ -39,8 +39,8 @@
 
             <div class="grid grid-cols-2">
                 <div class="mt-2">
-                    <label for="iemail" class="font-semibold text-sm">E-mail</label><br>
-                    <input type="text" name="email" id="iemail" style="height: 35px" class=" form-control @error('email') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('email')}}">
+                    <label for="iemail" class="font-semibold">E-mail</label><br>
+                    <input type="text" name="email" id="iemail" style="height: 35px " class=" form-control @error('email') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('email')}}">
                     @error('email')
                         <div class=" invalid-feedback text-red-600">
                             {{$message}}
@@ -49,8 +49,8 @@
                 </div>
 
                 <div class="mt-2">
-                    <label for="ibirth" class="font-semibold text-sm">Nascimento</label><br>
-                    <input type="date" name="birth" id="ibirth" style="height: 35px" class=" form-control @error('birth') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('birth')}}">
+                    <label for="ibirth" class="font-semibold">Nascimento</label><br>
+                    <input type="date" name="birth" id="ibirth" style="height: 35px " class=" form-control @error('birth') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('birth')}}">
                     @error('birth')
                         <div class=" invalid-feedback text-red-600">
                             {{$message}}
@@ -63,8 +63,8 @@
             <div class="grid grid-cols-2">
 
                     <div class="mt-2">
-                        <label for="istreet" class="font-semibold text-sm">Rua</label><br>
-                        <input type="text" name="street" id="istreet" style="height: 35px" class=" form-control @error('street') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('street')}}"><br>
+                        <label for="istreet" class="font-semibold">Rua</label><br>
+                        <input type="text" name="street" id="istreet" style="height: 35px " class=" form-control @error('street') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('street')}}"><br>
                         @error('street')
                             <div class=" invalid-feedback text-red-600">
                                 {{$message}}
@@ -73,8 +73,8 @@
                     </div>
                 
                     <div class="mt-2">
-                        <label for="inumber" class="font-semibold text-sm">Número</label><br>
-                        <input type="text" name="number" id="inumber" style="height: 35px" class=" form-control @error('number') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('number')}}"><br>
+                        <label for="inumber" class="font-semibold">Número</label><br>
+                        <input type="text" name="number" id="inumber" style="height: 35px " class=" form-control @error('number') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('number')}}"><br>
                         @error('number')
                             <div class="invalid-feedback text-red-600">
                                 {{$message}}
@@ -83,8 +83,8 @@
                     </div>
                 
                     <div class="mt-2">
-                        <label for="icomplement" class="font-semibold text-sm">Bairro/Complemento</label><br>
-                        <input type="text" name="complement" id="icomplement" style="height: 35px" class=" form-control @error('complement') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('complement')}}"><br>
+                        <label for="icomplement" class="font-semibold">Bairro/Complemento</label><br>
+                        <input type="text" name="complement" id="icomplement" style="height: 35px " class=" form-control @error('complement') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('complement')}}"><br>
                         @error('complement')
                             <div class="invalid-feedback text-red-600">
                                 {{$message}}
@@ -93,8 +93,8 @@
                     </div>
                 
                     <div class="mt-2">
-                        <label for="icity" class="font-semibold text-sm">Cidade</label><br>
-                        <input type="text" name="city" id="icity" style="height: 35px" class="form-control @error('city') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('city')}}"><br>
+                        <label for="icity" class="font-semibold">Cidade</label><br>
+                        <input type="text" name="city" id="icity" style="height: 35px " class="form-control @error('city') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('city')}}"><br>
                         @error('city')
                             <div class="invalid-feedback text-red-600">
                                 {{$message}}
@@ -103,8 +103,8 @@
                     </div>
                 
                     <div class="mt-2">
-                        <label for="istate" class="font-semibold text-sm">Estado</label><br>
-                        <input type="text" name="state" id="istate" style="height: 35px" class="form-control @error('state') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('state')}}"><br>
+                        <label for="istate" class="font-semibold">Estado</label><br>
+                        <input type="text" name="state" id="istate" style="height: 35px " class="form-control @error('state') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('state')}}"><br>
                         @error('state')
                             <div class="invalid-feedback text-red-600">
                                 {{$message}}
@@ -113,8 +113,8 @@
                     </div>
                 
                     <div class="mt-2">
-                        <label for="icep" class="font-semibold text-sm">CEP</label><br>
-                        <input type="text" name="cep" id="icep" style="height: 35px" class="form-control @error('cep') is invalid @enderror  rounded-md ring-2 opacity-60" value="{{ old('cep')}}"><br>
+                        <label for="icep" class="font-semibold">CEP</label><br>
+                        <input type="text" name="cep" id="icep" style="height: 35px " class="form-control @error('cep') is invalid @enderror  rounded-md ring-2 opacity-60" value="{{ old('cep')}}"><br>
                         @error('cep')
                             <div class="invalid-feedback text-red-600">
                                 {{$message}}
@@ -127,8 +127,8 @@
             <div class="grid grid-cols-2">
                     
                 <div>
-                    <label for="icellphone" class="font-semibold text-sm">Celular</label><br>
-                    <input type="text" name="cellphone" id="icellphone" style="height: 35px" class="form-control @error('cellphone') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('cellphone')}}"><br>
+                    <label for="icellphone" class="font-semibold">Celular</label><br>
+                    <input type="text" name="cellphone" id="icellphone" style="height: 35px " class="form-control @error('cellphone') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('cellphone')}}"><br>
                     @error('cellphone')
                         <div class="invalid-feedback text-red-600">
                             {{$message}}
@@ -137,8 +137,8 @@
                 </div>
                 
                 <div>
-                    <label for="icellphone2" class="font-semibold text-sm">Celular2</label><br>
-                    <input type="text" name="cellphone2" id="icellphone2" style="height: 35px" class="form-control @error('cellphone2') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('cellphone2')}}"><br>
+                    <label for="icellphone2" class="font-semibold">Celular2</label><br>
+                    <input type="text" name="cellphone2" id="icellphone2" style="height: 35px " class="form-control @error('cellphone2') is invalid @enderror rounded-md ring-2 opacity-60" value="{{ old('cellphone2')}}"><br>
                     @error('cellphone2')
                         <div class="invalid-feedback text-red-600">
                             {{$message}}
